@@ -74,6 +74,8 @@ python move.py
 ### 2.2.2损失函数
 
 针对赛题要求，人脸比对攻击，我们选择的人脸评价指标为`余弦距离`，如下：
+
+$ A = bFASF$
 $$
 \mathcal{L}_{d} = \frac {\mathcal{f}_{ori} \cdot \mathcal{f}_{adv}}{||{\mathcal f}_{ori}|| \cdot ||\mathcal{f}_{adv}||}
 $$
