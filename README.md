@@ -74,12 +74,26 @@ python move.py
 ### 2.2.2损失函数
 
 针对赛题要求，人脸比对攻击，我们选择的人脸评价指标为`余弦距离`，如下：
-![MommyTalk1649227900841](https://user-images.githubusercontent.com/49955700/161913225-771b98f6-6453-4730-821f-5e5113140025.png)
+$$
+\mathcal{L}_{d} = \frac {\mathcal{f}_{ori} \cdot \mathcal{f}_{adv}}{||{\mathcal f}_{ori}|| \cdot ||\mathcal{f}_{adv}||}
+$$
 
+根据赛题设计，已经设置好了图像配对的规则，并设置了*MS-SSIM* (multi-scale structural similarity)图像质量评价法，因此我们定义的`损失函数`如下：
+
+$$
+\mathcal{L} = \mathcal{L}_{d1}+\mathcal{L}_{d2} - \mathcal{L}_{MS-SSIM}
+$$
+
+其中：
+$$
+\mathcal{L}_{d1} = \frac {\mathcal{f}_{adv} \cdot \mathcal{f}_{ori}}{||{\mathcal f}_{adv}|| \cdot ||\mathcal{f}_{ori}||}\\
+\\
+\mathcal{L}_{d2} = \frac {\mathcal{f}_{adv} \cdot \mathcal{f}_{tar}}{||{\mathcal f}_{adv}|| \cdot ||\mathcal{f}_{tar}||}\\
+\\
+\mathcal{L}_{MS-SSIM} = (MS-SSIM(I_{adv},I_{ori}) - 0.8) \times 5
+$$
 
 这个损失函数可以保证在远离原图的基础上，并且远离需要匹配的目标图片，并且使得图像质量评价得分较高。
-
-
 
 
 
