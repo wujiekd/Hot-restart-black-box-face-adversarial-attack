@@ -1,0 +1,1 @@
+../source_data/adv_data/175_1.jpg;../source_data/adv_data/175_0.jpg;-0.013848616182804106
