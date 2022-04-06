@@ -1,6 +1,15 @@
 # Hot-restart-black-box-face-adversarial-attack
 
-# 1.运行方法
+2021OPPO安全AI挑战赛
+比赛链接：
+https://security.oppo.com/challenge/rank.html
+初赛：
+![3S}{F4~ DR140)}M%N_P`9S](https://user-images.githubusercontent.com/49955700/161908913-68270e7d-53cf-42df-ab04-4968922579e2.png)
+
+复赛：
+![U}PFY 4UX7XU(@NZJ`%1G}U](https://user-images.githubusercontent.com/49955700/161908932-11e32989-8c3e-4fe4-9a99-74fd2b6381b9.png)
+
+# 1. 运行方法
 
 两个文件夹，将图片文件夹分成两部分，一部分为亚洲人脸，另一部分为欧洲人脸数据集。
 
