@@ -76,22 +76,15 @@ python move.py
 针对赛题要求，人脸比对攻击，我们选择的人脸评价指标为`余弦距离`，如下：
 ![MommyTalk1649227900841](https://user-images.githubusercontent.com/49955700/161914856-a6105535-9b1d-498a-9b6c-538586dc45f3.png)
 
-
 根据赛题设计，已经设置好了图像配对的规则，并设置了**MS-SSIM** (multi-scale structural similarity)图像质量评价法，因此我们定义的`损失函数`如下：
 ![MommyTalk1649228513186](https://user-images.githubusercontent.com/49955700/161914955-126088ec-be66-42f2-9805-9f64c28014cb.png)
 
-
 其中：
-
-$$![MommyTalk1649228552069](https://user-images.githubusercontent.com/49955700/161915035-154c3bc4-a803-4bf8-9fe5-1627ba9e7c8a.png)
-
+![MommyTalk1649228552069](https://user-images.githubusercontent.com/49955700/161915035-154c3bc4-a803-4bf8-9fe5-1627ba9e7c8a.png)
 ![MommyTalk1649228570546](https://user-images.githubusercontent.com/49955700/161915104-653ca34c-ad34-4f07-8328-b1c34b3aef42.png)
-
 ![MommyTalk1649228578355](https://user-images.githubusercontent.com/49955700/161915114-6e7a82a8-2393-49e5-ac0e-a71345a1083b.png)
 
 这个损失函数可以保证在远离原图的基础上，并且远离需要匹配的目标图片，并且使得图像质量评价得分较高。
-
-
 
 ### 2.2.3改进点
 
@@ -116,7 +109,6 @@ $$![MommyTalk1649228552069](https://user-images.githubusercontent.com/49955700/1
 对于欧美人脸数据集，size非常大，采用端到端的方案会极度不稳定，因此采用提前resize为112\*112的方案。
 
 
-
 3、噪声初始化方法的选择
 
 灵感来源于PGD攻击[5]以及ODI-PGD攻击[6]，初始化往往可以获得一个很好的起点，更有利于攻击成功。
@@ -132,14 +124,9 @@ $$![MommyTalk1649228552069](https://user-images.githubusercontent.com/49955700/1
 考虑到赛方在进行线上评测时，可能会使用到检测人脸，再进行对比计算，因此对匹配图片采用mctnn检测得到112\*112的人脸进行计算loss。
 
 
-
-
-
 # 3.思考
 
 ==复赛第一阶段排名第6，第二阶段排名第13，发现欧美人脸数据集分布不是很一致，复赛第二阶段的欧美人脸比第一阶段整体size都大了很多，所以第一阶段的算法实现有所下降，希望主办方可以考虑这个问题进行排名评分。==
-
-
 
 
 # 4.团队介绍
