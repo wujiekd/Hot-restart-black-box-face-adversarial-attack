@@ -5,6 +5,7 @@
 2021OPPO安全AI挑战赛，比赛链接：
 https://security.oppo.com/challenge/rank.html
 
+Rank: 12/3000+ ，前十保底3w RMB，血亏orz
 初赛：
 ![3S}{F4~ DR140)}M%N_P`9S](https://user-images.githubusercontent.com/49955700/161908913-68270e7d-53cf-42df-ab04-4968922579e2.png)
 
